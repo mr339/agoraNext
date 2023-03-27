@@ -1,0 +1,32 @@
+:root {
+  --theme-bg-light-blue: #f5f6fe;
+}
+:root.darken {
+  --theme-bg-light-blue: $body-bg;
+}
+.how-section {
+  background-color: var(--theme-bg-light-blue);
+}
+.bg-light-blue {
+  background-color: var(--theme-bg-light-blue);
+}
+.service-section {
+  .position-sticky {
+    top: 25vh;
+  }
+  .bg {
+    &-primary,
+    &-warning,
+    &-info,
+    &-secondary,
+    &-danger {
+      --ek-bg-opacity: 0.1;
+    }
+  }
+}
+.svg-blob {
+  margin-top: -2.5rem;
+  width: 100%;
+  height: 12rem;
+  display: block;
+}

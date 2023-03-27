@@ -1,0 +1,33 @@
+.countdown {
+    &_item {
+        padding: 0 20px;
+        position: relative;
+        text-align: center;
+        @media screen and (max-width: 425px) {
+            padding: 0 10px;
+        }
+        h5 {
+            font-size: 26px;
+            margin-bottom: 0;
+            @media screen and (max-width: 425px) {
+                font-size: 18px;
+            }
+        }
+        p {
+            font-size: 14px;
+            @media screen and (max-width: 425px) {
+                font-size: 12px;
+            }
+        }
+        &:not(:last-child) {
+            &::after {
+                content: ':';
+                font-weight: 700;
+                position: absolute;
+                right: -7px;
+                top: -5px;
+                font-size: 25px;
+            }
+        }
+    }
+}

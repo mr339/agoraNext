@@ -1,0 +1,42 @@
+body {
+  font-family: 'Airbnb Cereal App' !important;
+}
+
+p {
+  margin-bottom: 0 !important;
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+// DATE PICKER
+.rdrDefinedRangesWrapper {
+  display: none;
+  width: 135px !important;
+  .rdrInputRanges {
+    display: none !important;
+  }
+  .rdrStaticRangeLabel {
+    // color: #444b4f;
+    padding: 15px 20px !important;
+  }
+}
+
+.rdrDateDisplayItem {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.rdrCalendarWrapper {
+  width: 500px;
+}
+
+.rdrDateDisplayWrapper {
+  background-color: #fff !important;
+}
+
+.rdrMonthAndYearWrapper {
+  padding-top: 0 !important;
+  height: 40px !important;
+}

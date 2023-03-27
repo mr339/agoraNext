@@ -1,0 +1,253 @@
+@import 'bootstrap/scss/maps';
+@import 'bootstrap/scss/mixins';
+@import '../../../node_modules/bootstrap/scss/utilities';
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  10: $spacer * 0.625,
+  12: $spacer * 0.75,
+  14: $spacer * 0.875,
+  15: $spacer * 0.9375,
+  18: $spacer * 1.125,
+  20: $spacer * 1.25,
+  25: $spacer * 1.5625,
+  30: $spacer * 1.875,
+  40: $spacer * 2.5,
+  50: $spacer * 3.125,
+  60: $spacer * 3.75,
+);
+
+// $font-size-base affects the font size of the body text
+$font-size-root: null;
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-size-sm: $font-size-base * 0.875;
+$font-size-lg: $font-size-base * 1.25;
+
+$font-weight-medium: 500;
+
+$utilities: (
+  'font-weight': (
+    property: font-weight,
+    class: fw,
+    values: (
+      light: $font-weight-light,
+      lighter: $font-weight-lighter,
+      normal: $font-weight-normal,
+      medium: $font-weight-medium,
+      bold: $font-weight-bold,
+      semibold: $font-weight-semibold,
+      bolder: $font-weight-bolder,
+    ),
+  ),
+  'font-size': (
+    rfs: true,
+    property: font-size,
+    class: fs,
+    values: (
+      sm: $font-size-sm,
+      base: $font-size-base,
+      lg: $font-size-lg,
+    ),
+  ),
+  'width': (
+    property: width,
+    class: w,
+    values: (
+      10: 10%,
+      20: 20%,
+      25: 25%,
+      30: 30%,
+      33: 33%,
+      40: 40%,
+      50: 50%,
+      60: 60%,
+      66: 66%,
+      70: 70%,
+      75: 75%,
+      80: 80%,
+      90: 90%,
+      100: 100%,
+
+      auto: auto,
+    ),
+  ),
+  'max-width': (
+    property: max-width,
+    class: mw,
+    values: (
+      10: 10%,
+      20: 20%,
+      25: 25%,
+      30: 30%,
+      33: 33%,
+      40: 40%,
+      50: 50%,
+      60: 60%,
+      66: 66%,
+      70: 70%,
+      75: 75%,
+      80: 80%,
+      90: 90%,
+      100: 100%,
+
+      auto: auto,
+    ),
+  ),
+  'viewport-width': (
+    property: width,
+    class: vw,
+    values: (
+      10: 10vw,
+      20: 20vw,
+      25: 25vw,
+      30: 30vw,
+      33: 33vw,
+      40: 40vw,
+      50: 50vw,
+      60: 60vw,
+      66: 66vw,
+      70: 70vw,
+      75: 75vw,
+      80: 80vw,
+      90: 90vw,
+      100: 100vw,
+      auto: auto,
+    ),
+  ),
+  'min-viewport-width': (
+    property: min-width,
+    class: min-vw,
+    values: (
+      10: 10vw,
+      20: 20vw,
+      25: 25vw,
+      30: 30vw,
+      33: 33vw,
+      40: 40vw,
+      50: 50vw,
+      60: 60vw,
+      66: 66vw,
+      70: 70vw,
+      75: 75vw,
+      80: 80vw,
+      90: 90vw,
+      100: 100vw,
+      auto: auto,
+    ),
+  ),
+  'height': (
+    property: height,
+    class: h,
+    values: (
+      10: 10%,
+      20: 20%,
+      25: 25%,
+      30: 30%,
+      33: 33%,
+      40: 40%,
+      50: 50%,
+      60: 60%,
+      66: 66%,
+      70: 70%,
+      75: 75%,
+      80: 80%,
+      90: 90%,
+      100: 100%,
+
+      auto: auto,
+    ),
+  ),
+  'max-height': (
+    property: max-height,
+    class: mh,
+    values: (
+      10: 10%,
+      20: 20%,
+      25: 25%,
+      30: 30%,
+      33: 33%,
+      40: 40%,
+      50: 50%,
+      60: 60%,
+      66: 66%,
+      70: 70%,
+      75: 75%,
+      80: 80%,
+      90: 90%,
+      100: 100%,
+
+      auto: auto,
+    ),
+  ),
+  'viewport-height': (
+    property: height,
+    class: vh,
+    values: (
+      10: 10vh,
+      20: 20vh,
+      25: 25vh,
+      30: 30vh,
+      33: 33vh,
+      40: 40vh,
+      50: 50vh,
+      60: 60vh,
+      66: 66vh,
+      70: 70vh,
+      75: 75vh,
+      80: 80vh,
+      90: 90vh,
+      100: 100vh,
+      auto: auto,
+    ),
+  ),
+  'min-viewport-height': (
+    property: min-height,
+    class: min-vh,
+    values: (
+      10: 10vh,
+      20: 20vh,
+      25: 25vh,
+      30: 30vh,
+      33: 33vh,
+      40: 40vh,
+      50: 50vh,
+      60: 60vh,
+      66: 66vh,
+      70: 70vh,
+      75: 75vh,
+      80: 80vh,
+      90: 90vh,
+      100: 100vh,
+      auto: auto,
+    ),
+  ),
+);
+
+// add cursor utility classes
+$utilities: map-merge(
+  $utilities,
+  (
+    'cursor': (
+      property: cursor,
+      class: cursor,
+      responsive: true,
+      values: auto pointer grab,
+    ),
+  )
+);
+
+$weights: 400, 500, 600,700;
+
+@each $weight in $weights {
+  .fw-#{$weight} {
+    font-weight: $weight
+  }
+}
+
+@import 'bootstrap/scss/utilities/api';

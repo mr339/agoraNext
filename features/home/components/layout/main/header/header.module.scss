@@ -1,0 +1,317 @@
+//Naming convention used is snake_case such as custom_name
+
+.header_top {
+  background: #f5f6f8;
+  font-size: 1rem;
+  letter-spacing: -0.027em;
+  text-transform: capitalize;
+  padding: 0.45em 2em;
+
+  .header_top_right a {
+    margin-left: 2em;
+    text-decoration: none;
+
+    &:hover {
+      color: #336699;
+    }
+  }
+
+  .header_dropdown {
+    margin-right: -12px;
+  }
+
+  select {
+    background-color: #f5f6f8 !important;
+    border: none;
+    margin-top: -2px;
+  }
+}
+
+.header_middle {
+  a {
+    text-decoration: none;
+
+    &:hover {
+      color: #336699;
+    }
+  }
+
+  padding: 2em;
+  color: #333;
+  background: #fff;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #eee;
+
+  .header_middle_search {
+    min-width: auto;
+    max-width: 55.6rem;
+    width: 100%;
+
+    .header_middle_search_searchbox {
+      width: 14.6rem;
+      border: 3px solid #336699;
+      border-right: none;
+      color: #666666;
+
+      &::after {
+        content: '';
+        height: 35px;
+        width: 1px;
+        background: #e5e5e5;
+        position: absolute;
+        right: 0;
+        top: 50%;
+      }
+    }
+
+    select {
+      height: 100%;
+      width: 100%;
+      border: 0;
+      position: relative;
+      padding: 0 2rem 0 1.5rem;
+      font-size: 1.2rem;
+    }
+
+    input {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      min-width: 40px;
+      padding: 0.9rem;
+      border: 3px solid #336699 !important;
+      border-right: 0;
+      font-size: 1.2rem;
+      letter-spacing: 0;
+      border-radius: 0 !important;
+    }
+
+    span {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+    }
+  }
+
+  .badge {
+    background-color: #336699;
+  }
+
+  .header_middle_right_info {
+    color: #336699;
+  }
+}
+
+.header_bottom {
+  a {
+    text-decoration: none;
+
+    &:hover {
+      color: #336699;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #0087ca;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+
+  padding-left: 2em;
+  padding-right: 2em;
+  color: #333;
+  background: #fff;
+  font-size: 1.2rem;
+
+  .header_bottom_left {
+    .dropdown_content_category {
+      display: block;
+      background-color: #fff;
+      min-width: 28rem;
+
+      ul {
+        display: block;
+
+        li {
+          display: block !important;
+          border-bottom: 1px solid #eeeeee;
+          padding: 20px 10px;
+          margin-right: 0;
+
+          &:hover {
+            background-color: #f5f6f8;
+          }
+        }
+      }
+    }
+
+    select {
+      width: 100%;
+      background-color: #f1f1f1;
+      border-radius: 0;
+      min-width: 28rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      border-top: 0;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+      margin-left: 20px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      li {
+        display: inline;
+        margin-right: 40px;
+        font-weight: 600;
+        font-size: 1.2rem;
+        letter-spacing: -0.009em;
+        line-height: 1.1;
+        position: relative;
+
+        .dropdown_content {
+          display: none;
+          position: absolute;
+          background-color: #fff;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          z-index: 1;
+          padding: 20px 15px;
+
+          a {
+            display: block;
+            padding: 10px 15px;
+
+            &::after {
+              width: 0;
+            }
+          }
+        }
+
+        &:hover {
+          .dropdown_content {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .header_bottom_right {
+    align-self: center;
+
+    a {
+      font-weight: 600;
+      font-size: 1.2rem;
+      letter-spacing: -0.009em;
+      line-height: 1.1;
+      position: relative;
+
+      &:first-child {
+        margin-right: 3rem;
+      }
+
+      &::after {
+        width: 0%;
+      }
+    }
+  }
+}
+
+//ecommerceheadercss
+.ecommerce_header {
+  .ecommerce_header_top {
+    padding: 1em 2em;
+
+    a {
+      color: rgba(255, 255, 255, 0.65);
+      text-decoration: none;
+    }
+
+    .header_dropdown {
+      select {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='white' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round'  stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e ");
+        background-color: black;
+        background-size: 20px;
+        color: rgba(255, 255, 255, 0.65);
+        border: none;
+      }
+    }
+  }
+
+  .ecommerce_header_middle {
+    padding: 0.45em 2em;
+
+    .ecommerce_input_group {
+      min-width: auto;
+      max-width: 55.6rem;
+      width: 100%;
+      margin: auto;
+      padding: 0.9rem;
+
+      .form_control {
+        display: block;
+        width: 100%;
+        font-size: 0.9375rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #4b566b;
+        background-color: #fff;
+        background-clip: padding-box;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 0.3125rem;
+        box-shadow: inset 0 1px 2px rgb(0 0 0 / 0%);
+        padding: 0.9rem;
+        border: 3px solid #336699 !important;
+        border-top-right-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+      }
+
+      button {
+        background-color: #336699;
+        border-width: 0;
+      }
+    }
+
+    .badge {
+      background-color: #336699;
+    }
+
+    .carticon {
+      margin-top: -5px;
+    }
+  }
+
+  .header_bottom {
+    a {
+      &::after {
+        width: 0 !important;
+      }
+    }
+
+    .header_bottom_left {
+      min-width: auto;
+      max-width: 55.6rem;
+      width: 100%;
+      margin: auto;
+    }
+  }
+}

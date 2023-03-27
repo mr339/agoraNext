@@ -1,0 +1,87 @@
+.head_listing_dash {
+  padding: 26px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 2px 4px rgba(234, 236, 244, 0.2);
+  background-color: #ffffff;
+}
+
+.logo_header {
+  display: flex;
+  align-items: center;
+}
+
+.profile_main_dropdowns {
+  .profile_drop {
+    background: #f6f6f6;
+    border-radius: 83px;
+    padding: 12px 22px;
+    display: flex;
+    width: 366px;
+    align-items: center;
+    border: transparent;
+    &:active {
+      background-color: #f6f6f6;
+    }
+  }
+}
+
+.profile_images {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  .astrologer_infomations {
+    p {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: #25293b;
+    }
+    span {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 4px;
+      letter-spacing: 0.03em;
+      color: #9e9e9e;
+    }
+  }
+}
+
+.drop_menu_user {
+  box-shadow: 0px 1px 12px rgb(0 0 0 / 5%);
+  border: 1px solid #f1f1f1;
+  padding: 17px 19px;
+  margin-right: 32px;
+  .items_drop {
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      color: #12192c;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 720px !important;
+  }
+  .profile_main_dropdowns {
+    .profile_drop {
+      width: auto !important;
+      padding: 12px 15px;
+    }
+  }
+  .dots_image {
+    display: none !important;
+  }
+
+  .astrologer_infomations {
+    display: none !important;
+  }
+  .drop_menu_user {
+    margin-right: 15px !important;
+  }
+}

@@ -1,0 +1,22 @@
+.btn {
+    outline: 0 !important;
+    border: 0 !important;
+    &-primary {
+        color: $white;
+        &:hover,
+        &:focus,
+        &:active,
+        &:disabled {
+            color: $white !important;
+        }
+    }
+    &-secondary {
+        color: $white;
+        &:hover,
+        &:focus,
+        &:active,
+        &:disabled {
+            color: $white !important;
+        }
+    }
+}

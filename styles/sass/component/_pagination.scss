@@ -1,0 +1,25 @@
+.pagination {
+    margin-top: 32px;
+    justify-content: center;
+    .page-item {
+        .page-link {
+            border-radius: 40px ;
+            font-size: $font-size-base;
+            font-weight: 700;
+            color: #686868;
+            margin: 0 4px;
+            padding: 11px 19px;
+            border: none;
+            &:focus {
+                box-shadow: none;
+            }
+        }
+        &.active {
+            .page-link {
+                background-color: $primary;
+                border-color: $primary;
+                color: $white;
+            }
+        }
+    }
+}

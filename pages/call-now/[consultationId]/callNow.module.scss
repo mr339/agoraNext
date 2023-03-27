@@ -1,0 +1,296 @@
+.main_calling_section {
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 132px);
+  .video_section {
+    background-color: #d9d9d9;
+    border-radius: 24px;
+    width: 800px;
+    max-width: 1010px;
+    // padding: 25px;
+    position: relative;
+    height: calc(100vh - 280px);
+    overflow: hidden;
+  }
+  .full_screen_image {
+    // display: flex;
+    // justify-content: flex-end;
+    // align-items: center;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    z-index: 99;
+  }
+  .ringing_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // padding: 138px 0 100px 0;
+    img {
+      margin-bottom: 20px;
+    }
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      color: #ffffff;
+    }
+  }
+  .caller_buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+}
+
+.main_info_section {
+  background-color: #ffffff;
+  box-shadow: 0px -5px 36px rgb(102 149 241 / 5%);
+  height: calc(100vh - 132px);
+  .inner_info_section {
+    padding: 70px 50px 0 50px;
+    h1 {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      color: #686868;
+      margin-bottom: 24px;
+    }
+  }
+  .main_time_counts {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .timing {
+    p {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 32px;
+      color: #000000;
+    }
+    .span_timing {
+      width: 4px;
+      background-color: #e7e8ea;
+      color: #e7e8ea;
+      height: 30px;
+    }
+  }
+  .timer {
+    border-radius: 76px;
+    background-color: #e7e8ea;
+    p {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 32px;
+      padding: 5px 10px;
+      color: #12192c;
+    }
+  }
+  .session_information {
+    margin-bottom: 24px;
+  }
+  .card_information {
+    padding: 20px;
+    background: #fdfdfd;
+    border: 1px solid #f1f1f1;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    h2 {
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 34px;
+      color: #12192c;
+      span {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 21px;
+        color: #7b7b7b;
+        padding-left: 8px;
+      }
+    }
+  }
+  .members_number {
+    p {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 20px;
+      color: $primary;
+      margin-bottom: 12px !important;
+    }
+  }
+
+  .booked_by_sec {
+    margin-bottom: 10px;
+    p {
+      width: 100px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      color: #12192c;
+    }
+    span {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 24px;
+      color: #12192c;
+    }
+  }
+}
+
+.inner_timers {
+  color: #12192c;
+  h1 {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 20px;
+  }
+  p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+
+.timers_numbers {
+  padding: 17px;
+  background: linear-gradient(180deg, #ffefc2 0%, #ffd357 100%);
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.main_info_wrapper {
+  max-height: calc(100vh - 500px);
+  overflow: auto;
+}
+
+.deactivated_calls {
+  background-color: #a1a1a1;
+  border: transparent;
+  border-radius: 8px;
+  padding: 15px 11px 15px 11px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.waiting_section {
+  img {
+    margin-bottom: 50px;
+  }
+  h3 {
+    @media only screen and (max-width: 425px) {
+      font-size: 18px;
+    }
+  }
+  p {
+    color: $text-color;
+    @media only screen and (max-width: 425px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.operator {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  height: 25% !important;
+  width: 30%;
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 9;
+}
+
+.user {
+  display: block;
+}
+
+.hide_video {
+  display: none;
+}
+
+.fullscreen_time_info {
+  position: absolute;
+  bottom: 35px;
+  left: 5px;
+  // padding: 10px 0px;
+  color: #fff;
+  border-radius: 4px;
+  @media screen and (max-width: 1200px) {
+    bottom: 25px;
+    left: 15px;
+  }
+  .main_time_counts {
+    .time_info {
+      background-color: rgba(15, 14, 14, 0.3);
+      border-radius: 70px;
+      padding: 7px 15px;
+      @media screen and (max-width: 1200px) {
+        font-size: 14px !important;
+        margin: 5px 0 0 !important;
+      }
+    }
+    .span_timing {
+      color: rgba(27, 27, 29, 1);
+      @media screen and (max-width: 1200px) {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 1200px) {
+      flex-direction: column;
+    }
+  }
+  @media only screen and (max-width: 650px) {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1220px) {
+  .main_calling_section {
+    .video_section {
+      width: 650px;
+    }
+  }
+  .inner_info_section {
+    padding: 50px 20px 0 20px !important;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .main_calling_section {
+    .video_section {
+      width: 90vw;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .inner_info_section {
+    padding: 30px 20px 0 20px !important;
+  }
+}
+
+@media only screen and (max-width: 1088px) {
+  .booked_by_sec {
+    p {
+      font-size: 16px !important;
+    }
+    span {
+      font-size: 16px !important;
+    }
+  }
+  .card_information {
+    padding: 15px;
+  }
+}

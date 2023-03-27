@@ -1,0 +1,116 @@
+// Required
+@import '../../../node_modules/bootstrap/scss/functions';
+
+// Default variable overrides
+//Variables goes here
+$white: #fff !default;
+$black: #000;
+
+$text-color: #7B7B7B;
+
+//fonts
+$font-family-base: 'Airbnb Cereal App' !important !default;
+
+//Brand Colors
+$primary: #C19C23;
+$primary-light: rgba(193, 156, 35, .6);
+$secondary: #a1a1a1;
+$info: #5b99ea;
+$success: #07B62A;
+$warning: #eebf41;
+$danger: #DB1D3A;
+$light: $white;
+$dark: #252930;
+
+// Prefix for :root CSS variables
+$variable-prefix: ek-;
+$prefix: $variable-prefix;
+
+// Required
+@import '../../../node_modules/bootstrap/scss/variables';
+@import '../../../node_modules/bootstrap/scss/mixins';
+
+////Variables for theme goes here
+:root.darken {
+  /* redefine theme colors for dark theme */
+  $primary: #335eec;
+  $secondary: #b902b9;
+  $success: #008817;
+  $warning: #b98500 !default;
+  $danger: #b90000 !default;
+  $dark: $white;
+  $light: $black;
+  $body-color: #d4d4d4;
+  $body-bg: #121519;
+
+  $theme-colors: (
+    'primary': $primary,
+    'secondary': $secondary,
+    'success': $success,
+    'info': $info,
+    'warning': $warning,
+    'danger': $danger,
+    'dark': $dark,
+    'light': $light,
+    'body-color': $body-color,
+    'body-bg': $body-bg,
+  );
+  --#{$variable-prefix}body-color: #{$body-color};
+  --#{$variable-prefix}body-bg: #{$body-bg};
+
+  /* redefine theme color variables */
+  @each $color, $value in $theme-colors {
+    --#{$variable-prefix}#{$color}: #{$value};
+  }
+  @each $color, $value in $theme-colors {
+    --#{$variable-prefix}bg-#{$color}: #{$value};
+  }
+
+  /* redefine theme color rgb vars (used for bg- colors) */
+  $theme-colors-rgb: map-loop($theme-colors, to-rgb, '$value');
+  @each $color, $value in $theme-colors-rgb {
+    --#{$variable-prefix}#{$color}-rgb: #{$value};
+  }
+  @each $color, $value in $theme-colors {
+    .btn-#{$color} {
+      @include button-variant($value, $value);
+    }
+  }
+
+  @each $color, $value in $theme-colors {
+    .btn-outline-#{$color} {
+      @include button-outline-variant($value);
+    }
+  }
+  .navbar-nav {
+    --ek-navbar-hover-color: #fff;
+    --ek-nav-link-color: var(--ek-body-color);
+    --ek-nav-link-hover-color: var(--ek-navbar-hover-color);
+  }
+  .offcanvas,
+  .offcanvas-xxl,
+  .offcanvas-xl,
+  .offcanvas-lg,
+  .offcanvas-md,
+  .offcanvas-sm {
+    --ek-offcanvas-bg: var(--ek-body-bg);
+  }
+}
+
+$nav-link-color: $primary;
+
+$nav-link-hover-color: darken($primary, 10%);
+// color for the card
+$card-bg: var(--#{$variable-prefix}body-bg);
+$card-color: var(--#{$variable-prefix}body-color);
+
+//color for box shadow
+$box-shadow: 0 0.5rem 1rem rgba(var(--#{$variable-prefix}dark-rgb), 0.15);
+$box-shadow-sm: 0 0.125rem 0.25rem
+  rgba(var(--#{$variable-prefix}dark-rgb), 0.075);
+$box-shadow-lg: 0 1rem 3rem rgba(var(--#{$variable-prefix}dark-rgb), 0.175);
+$box-shadow-inset: inset 0 1px 2px
+  rgba(var(--#{$variable-prefix}dark-rgb), 0.075);
+
+// pagination
+$pagination-border-radius-sm: 40px;

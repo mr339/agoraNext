@@ -1,0 +1,63 @@
+//Custom variables
+@import './abstract/variables';
+@import './abstract/utilities';
+
+//Bootstrap
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+// components
+@import '../sass/component/pagination';
+@import '../sass/component/button';
+
+// pages
+@import '../sass/pages/home';
+@import './font/font';
+
+// fonts
+@font-face {
+  font-family: 'Airbnb Cereal App';
+  src: url('./font/AirbnbCerealApp-ExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Airbnb Cereal App';
+  src: url('./font/AirbnbCerealApp-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Airbnb Cereal App';
+  src: url('./font/AirbnbCerealApp-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Airbnb Cereal App';
+  src: url('./font/AirbnbCerealApp-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Airbnb Cereal App';
+  src: url('./font/AirbnbCerealApp-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Airbnb Cereal App';
+  src: url('./font/AirbnbCerealApp-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
